@@ -63,8 +63,9 @@ echo "⚙️  Creating Windows-compatible environment configuration..."
 
 # Create .env file with Windows-compatible paths
 cat > .env << EOF
-# NVIDIA API Configuration
+# NVIDIA API Configuration (VSS expects OPENAI_API_KEY for NVIDIA API)
 NVIDIA_API_KEY=$NVIDIA_API_KEY
+OPENAI_API_KEY=$NVIDIA_API_KEY
 
 # Service Ports
 BACKEND_PORT=7860
